@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/css_artisans/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css_artisans/custom.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container section-ourTeam">
+	<div class="row">
+		<div class="col-md-12 ourTeam-hedding text-center">
+			<h1>Our Team</h1>
+
+		</div>
+	</div>
+	<div class="row">
+		<% for(var i=0;i < artisans.length;i++) {  %>
+		<div class="col-md-4 col-sm-4 col-xs-12">
+			<div class="row section-success ourTeam-box text-center">
+				<div class="col-md-12 section1">
+					<img src="image/girl.png">
+				</div>
+				<div class="col-md-12 section2">
+					<p><a href="/dashboard/artisan/profile?id=<%=artisans[i]._id%>"><%=artisans[i].username %></a></p>
+				</div>
+				<div class="col-md-12 section3">
+					<i class="fa fa-video" aria-hidden="true"></i>
+					<i class="fa fa-image" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+		<% } %>
+	</div>
+</div>
+</body>
+</html>

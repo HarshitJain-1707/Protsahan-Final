@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="/css/reset_qa.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="/css/style_qa.css"> <!-- Resource style -->
+	<script src="js/modernizr_qa.js"></script> <!-- Modernizr -->
+	<title>QA</title>
+</head>
+<body>
+<header>
+	<h1>All Questions</h1>
+</header>
+<section class="cd-faq">
+	<!--<ul class="cd-faq-categories">
+		<li><a class="selected" href="#basics">Basics</a></li>
+		<li><a href="#mobile">Mobile</a></li>
+		<li><a href="#account">Account</a></li>
+		<li><a href="#payments">Payments</a></li>
+		<li><a href="#privacy">Privacy</a></li>
+		<li><a href="#delivery">Delivery</a></li>
+	</ul>--> <!-- cd-faq-categories -->
+
+	<div class="cd-faq-items">
+
+		<ul id="basics" class="cd-faq-group">
+			<h1> Questions Yet to be Answered!! </h1>
+			<li class="cd-faq-title"></li>
+			<% for(var i=0; i < questions.length  && questions[i].status == "false"; i++) { %>
+			<li>
+				<a class="cd-faq-trigger" href="/dashboard/artisan/question?id=<%= questions[i]._id %>"><%= questions[i].query %></a>
+
+
+				<!--<div class="cd-faq-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quidem blanditiis delectus corporis, possimus officia sint sequi ex tenetur id impedit est pariatur iure animi non a ratione reiciendis nihil sed consequatur atque repellendus fugit perspiciatis rerum et. Dolorum consequuntur fugit deleniti, soluta fuga nobis. Ducimus blanditiis velit sit iste delectus obcaecati debitis omnis, assumenda accusamus cumque perferendis eos aut quidem! Aut, totam rerum, cupiditate quae aperiam voluptas rem inventore quas, ex maxime culpa nam soluta labore at amet nihil laborum? Explicabo numquam, sit fugit, voluptatem autem atque quis quam voluptate fugiat earum rem hic, reprehenderit quaerat tempore at. Aperiam.</p>
+				</div>  cd-faq-content -->
+			</li>
+			<% } %>
+
+			<h1> Questions Answered Already!! </h1>
+
+			<% for(var i=0; i < questions.length  && questions[i].status == "true"; i++) { %>
+			<li>
+				<a class="cd-faq-trigger" href="/dashboard/artisan/question?id=<%= questions[i]._id %>"><%= questions[i].query %></a>
+
+
+				<!--<div class="cd-faq-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quidem blanditiis delectus corporis, possimus officia sint sequi ex tenetur id impedit est pariatur iure animi non a ratione reiciendis nihil sed consequatur atque repellendus fugit perspiciatis rerum et. Dolorum consequuntur fugit deleniti, soluta fuga nobis. Ducimus blanditiis velit sit iste delectus obcaecati debitis omnis, assumenda accusamus cumque perferendis eos aut quidem! Aut, totam rerum, cupiditate quae aperiam voluptas rem inventore quas, ex maxime culpa nam soluta labore at amet nihil laborum? Explicabo numquam, sit fugit, voluptatem autem atque quis quam voluptate fugiat earum rem hic, reprehenderit quaerat tempore at. Aperiam.</p>
+				</div>  cd-faq-content -->
+			</li>
+			<% } %>
+
+
+		</ul> <!-- cd-faq-group -->
+
+
+	</div> <!-- cd-faq-items -->
+	<a href="#0" class="cd-close-panel">Close</a>
+</section> <!-- cd-faq -->
+<script src="js/jquery-2.1.1_qa.js"></script>
+<script src="js/jquery.mobile.custom.min_qa.js"></script>
+<script src="js/main_qa.js"></script> <!-- Resource jQuery -->
+</body>
+</html>
