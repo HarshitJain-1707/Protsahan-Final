@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 const employeesSchema = new Schema({
   username: {
     type: String,
-    trim: true,
+    trim: true
   },
   email: {
     type: String,

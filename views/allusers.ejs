@@ -1,1 +1,51 @@
-<%= users[0].username %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<table id="customers">
+  <tr>
+    <th>Name</th>
+    <th>Email_id</th>
+    <th>State</th>
+    <th>Department</th>
+  </tr>
+  <% for(var i=0;i < users.length;i++) {  %>
+  <tr>
+    <td><%= users[i].username %></td>
+    <td><%= users[i].email %></td>
+    <td><%= users[i].state %></td>
+    <td><%= users[i].department %></td>
+  </tr>
+  <% } %>
+
+</table>
+
+</body>
+</html>

@@ -24,7 +24,7 @@
 
     .header-main{
     width: 100%;
-    height: 10vh;
+    height:10vh;
 }
 
 nav {
@@ -61,22 +61,12 @@ nav ul li a {
     padding-right: 10px;
 }
 
-.footer {
-    height:70px;
-    width:100%;
-    background-color: rgba(0, 0, 0,0.899);
-    color: white;
-    text-align: center;
-    bottom: 0;
-}
-.footer h2 {
-    padding-top: 20px;
-}
+
 
 .sidebar{
     margin-top: 15px;
     width:250px;
-    height:450px;
+    height:517px;
     background-color:#DDDDDD;
 
 }
@@ -130,7 +120,7 @@ nav ul li a {
 <body>
     <div class="header-main">
         <nav>
-            <img src="logo.png" width="200" height="80">
+            <img src="images/logo.png" width="200" height="80">
             <ul>
                 <li><a href="#"><i class="fas fa-bell fa-lg" style="color:white; cursor:pointer; padding-right:5px;"  aria-hidden="true"></i>Notifications</a></li>
                 <li><a href="#">Home</a></li>
@@ -141,7 +131,7 @@ nav ul li a {
 
     <div class="sidebar">
         <ul>
-            <li><h2><%= req.session.user[0].username %></h2></li>
+            <li><h2 style="text-transform:uppercase;"><%= req.session.user[0].username %></h2></li>
             <li><a href="/dashboard/artisans">State Artisans</a></li>
             <li><a href="/dashboard/artisans/all">All Artisans</a></li>
             <li><a href="/scheme">Add Scheme</a></li>
@@ -154,9 +144,9 @@ nav ul li a {
     <div class="artisan">
         <h2>No of Artisans Registered: 60</h2>
     </div>
-    <div>
+
         <div id="myfirstchart" style="height: 250px;width:500px; left:20%;top:-400px;"></div>
-    </div>
+
 
     <div id="donut-example" style=" position :relative; height: 250px;width:500px; left:60%;top:-650px;"></div>
     <script>
@@ -197,5 +187,3 @@ nav ul li a {
             <span><h2>@PROTSAHAN</h2></span>
     </div>
 </body>
-
-/* <%= req.session.user[0].username %> */

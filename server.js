@@ -80,7 +80,7 @@ app.use((req, res, next) => {
   next();
 });
 
-//Routes Created by Harshit
+//Routes Created by Harshit for web dashboard
 
 app.get('/', (req, res) => {
   // res.sendFile(__dirname + "/views/index.html");
@@ -208,6 +208,7 @@ app.post('/adminlogin/adduser', async(req, res) => {
          email: req.body.email,
          username :req.body.username,
          department: req.body.department,
+         state:req.body.state,
          password : generator.generate({
         length: 6,
         numbers: true
@@ -387,15 +388,8 @@ app.get('/logout',(req,res) => {
 });
 
 
-// app.get('/dashboard/videos', (req, res) => {
-//   console.log(req.session.user[0].state)
-//   Video.find({ state: req.session.user[0].state },
-//     (err, artisans) => {
-//       if(err === null)
-//         res.render('artisans', { req, res, artisans });
-//     }
-//   );
-// })
+
+// Routes created by Ankit for mobileApp
 app.get('/api/notifications',(req, res) =>{
   Notifications.find({}, function(err,notes) {
     if(err){
@@ -442,14 +436,15 @@ app.post('/api/query',(req, res) => {
     });
 })
 
-//Routes Created by Ankit
 app.post('/api/artisans', (req, res) => {
+//console.log(req.body.username);
   Artisan.find({ username: req.body.username })
     .exec()
     .then(user => {
       if (user.length >= 1) {
         return res.status(409).json({
-          message: 'Mail exists'
+          message: 'Mail exists',
+          success:false
         });
       } else {
         const salt = bcrypt.genSaltSync(10);
@@ -465,7 +460,8 @@ app.post('/api/artisans', (req, res) => {
           .then(result => {
             console.log(result);
             res.status(201).json({
-              message: 'User Created'
+              message: 'User Created',
+              success: true
             });
           })
           .catch(err => {
