@@ -42,12 +42,20 @@ const artisanSchema = new Schema({
   },
   images: [{
     url:String,
-    title:String
+    title:String,
+    status:{
+      type:Boolean,
+      default:false
+    }
   }],
   videos:[{
     url: String,
     title:String,
-    thumbnail:String
+    thumbnail:String,
+    status:{
+      type:Boolean,
+      default:false
+    }
   }],
   pdfs:[{
     url: String,
@@ -67,7 +75,12 @@ const artisanSchema = new Schema({
   },
   fcmtoken:{
     type:String
-  }
+  },
+  qualification:{
+    type:String
+  },
+  skills:[String],
+
 });
 
 //{ $push: { videos: video } }

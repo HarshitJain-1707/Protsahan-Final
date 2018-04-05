@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Protsahan | Add User</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
@@ -18,72 +18,11 @@
    background: #f1f1f1;
 
 }
-/* <!--
-.profile-card{
-   width:400px;
-   overflow: hidden;
-   position: absolute;
-   top:54%;
-   left:50%;
-   transform:translate(-50%,-50%);
-   background: white;
-   color:#314652;
-}
 
-.header-profile{
-   width: 100%;
-   height: 300px;
-   overflow: hidden;
-   position: relative;
-}
-.header-profile:before{
-   content: '';
-   position: absolute;
-   border-top: 30px solid transparent;
-   border-left: 400px solid white;
-   bottom:0;
-}
-
-.header-profile img{
-   width:100%;
-   height:299px;
-
-}
-
-.content{
-   padding:10px;
-   overflow: hidden;
-   text-align: center;
-}
-.content h2{
-margin: 0 5px 0 0;
-}
-
-.footer-profile{
-   width: 100%;
-   height:80px;
-   background: #314652;
-   position: relative;
-   color:white;
-}
-
-.footer-profile:before {
-   content: '';
-   position: absolute;
-   border-bottom: 30px solid transparent;
-   border-right: 400px solid white;
-   top:-1px;
-}
-
-.footer-profile p{
-   margin: 0;
-   padding: 30px;
-   display: block;
-}--> */
 
 .header-main{
    width: 100%;
-   height: 13.7vh;
+   height: 13.75vh;
 }
 
 nav {
@@ -199,7 +138,7 @@ input[type=submit]:hover {
           <nav>
               <img src="images/logo.png" width="200" height="80" >
               <ul>
-
+                  <li><a href="/profile">Home</a></li>
                   <li><a href="/">Logout</a></li>
               </ul>
           </nav>
@@ -214,7 +153,12 @@ input[type=submit]:hover {
       <input type="email" id="email" name="email" placeholder="Enter user's email">
 
       <label for="department">Department</label>
-      <input type="text" id="department" name="department" placeholder="Enter user's department">
+      <select id="state" name="department">
+      <option value="">Select user's department</option>
+        <option value="TRIFED">TRIFED</option>
+        <option value="NSTFDC">NSTFDC</option>
+        <option value="MoTA">MoTA</option>
+      </select>
 
       <label for="state">State</label>
       <select id="state" name="state">
@@ -222,6 +166,11 @@ input[type=submit]:hover {
         <option value="assam">Assam</option>
         <option value="chattisgarh">Chattisgarh</option>
         <option value="orissa">Orissa</option>
+        <option value="orissa">Kerala</option>
+        <option value="orissa">Madhya Pradesh</option>
+        <option value="orissa">Gujarat</option>
+        <option value="orissa">Pondicherry</option>
+        <option value="orissa">Manipur</option>
       </select>
 
       <input type="submit" value="Add" >

@@ -106,7 +106,25 @@ nav ul li a {
 .fas fa-bell fa-lg:hover{
     padding-right: 10px;
 }
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
 
+    border-radius: 5px; /* 5px rounded corners */
+}
+.card img {
+    border-radius: 5px 5px 0 0;
+}.
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
 .footer {
     height:70px;
     width:100%;
@@ -120,7 +138,7 @@ nav ul li a {
 }
 .video-gallery{
     position: relative;
-} 
+}
 .video-heading {
     position: relative;
     left: 48%;
@@ -133,7 +151,7 @@ nav ul li a {
 
 .video-footer {
     position: relative;
-   
+
 }
 .image-heading {
     position: relative;
@@ -149,47 +167,24 @@ nav ul li a {
 
 /* Style the images inside the grid */
 .column img {
-     
-    cursor: pointer; 
+
+    cursor: pointer;
 
 }
 
 .column img:hover {
     opacity: 1;
-    
+
 }
 
 /* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 
-/* The expanding image container */
-.container {
-    position: relative;
-    display: none;
-}
+
 
 /* Expanding image text */
-#imgtext {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    color:black;
-    font-size: 20px;
-}
+
 
 /* Closable button inside the expanded image */
-.closebtn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color: black;
-    font-size: 35px;
-    cursor: pointer;
-}
 
 
 /* <div class="row">
@@ -213,7 +208,7 @@ nav ul li a {
                 <img src="ourTeam.jpg" alt="Lights" style="width: 400px;" onclick="myFunction(this);">
             </div>
           </div>
-          
+
           <div class="container">
             <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
             <img id="expandedImg" style="width:100%">

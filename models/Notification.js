@@ -17,6 +17,9 @@ const NotifySchema = new Schema({
   },
   timestamp:{
     type: Date
+  },
+  answer:{
+    type:String
   }
 });
 

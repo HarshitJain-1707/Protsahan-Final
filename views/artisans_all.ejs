@@ -1,149 +1,165 @@
-<!DOCTYPE html>
+<html>
+  <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <title>Protsahan | Artisans</title>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+	<style>
+
+	body {
+	background-color:#F1F1F1;
+   font-family: "Lato",sans-serif;
+	}
+
+	.nav-wrapper {
+	background-color:black;
+  	height:20px;
+	}
+	.card-image {
+   height:200px;
+	}
+  .navbar-fixed nav ul li{
+    padding-right: 10px;
+  }
+
+  .navbar-fixed nav ul li a:hover{
+    background-color: green;
+    transition: 0.8s all;
+  }
+	</style>
+
+</head>
+
+<body>
+
+   <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper" style="height:90px;">
+        <a href="#!" class="brand-logo" style="padding-top:10px; padding-left:10px;">Protsahan</a>
+        <ul class="right hide-on-med-and-down">
+          <li style="padding-top:13px; padding-right:15px;"><a style="font-size:18px;"href="/dashboard">Home</a></li>
+          <li style="padding-top:13px; padding-right:15px;"><a style="font-size:18px;" href="/">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+	</div>
+/
+	 <div class="row" style="margin-top:40px;">
+	 	<% for(var i=0;i < artisans.length;i++) {  %>
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <%= console.log(artisans[i].profilephoto) %>
+          <img style="height:300px;" src="<%= artisans[i].profilephoto.substring(6) %>">
+
+        </div>
+        <div class="card-content">
+
+        </div>
+        <div class="card-action">
+          <a href="/dashboard/artisan/profile?id=<%=artisans[i]._id%>" style="text-align:center;"><%=artisans[i].name %></a>|&nbsp;&nbsp;<%=artisans[i].skills[0] %>
+        </div>
+      </div>
+    </div>
+	<% } %>
+  </div>
+  <footer class="page-footer" style="background-color:black; height:90px;">
+
+         <div class="footer-copyright">
+           <div class="container" style="position:relative;left:32%;font-size:24px;font-weight:700;">
+           ©PROTSAHAN
+           </div>
+         </div>
+       </footer>
+
+</body>
+</html>
+
+
+
+
+
+<!-- /**<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="/css_artisans/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/css_artisans/custom.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+<style>
 
- <style>
-        body{
-    margin: 0;
-    padding:0;
-    font-family: "Lato",sans-serif;
-    background: #f1f1f1;
-
+body {
+	background-color: #F1F1F1;
 }
-<!--
-.profile-card{
-    width:400px;
-    overflow: hidden;
-    position: absolute;
-    top:54%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    background: white;
-    color:#314652;
-}
-
-.header-profile{
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
-}
-.header-profile:before{
-    content: '';
-    position: absolute;
-    border-top: 30px solid transparent;
-    border-left: 400px solid white;
-    bottom:0;
-}
-
-.header-profile img{
-    width:100%;
-    height:299px;
-
-}
-
-.content{
-    padding:10px;
-    overflow: hidden;
-    text-align: center;
-}
-.content h2{
-margin: 0 5px 0 0;
-}
-
-.footer-profile{
-    width: 100%;
-    height:80px;
-    background: #314652;
-    position: relative;
-    color:white;
-}
-
-.footer-profile:before {
-    content: '';
-    position: absolute;
-    border-bottom: 30px solid transparent;
-    border-right: 400px solid white;
-    top:-1px;
-}
-
-.footer-profile p{
-    margin: 0;
-    padding: 30px;
-    display: block;
-}-->
 
 .header-main{
-    width: 100%;
-    height: 100vh;
+   width: 100%;
+   height: 13.7vh;
 }
 
 nav {
-    width :100%;
-    height:80px;
-    background-color:rgba(0, 0, 0,0.850);
-    line-height: 50px;
-    position: fixed;
-    z-index: 100;
+   width :100%;
+   height:80px;
+   background-color:rgba(0, 0, 0,0.850);
+   line-height: 50px;
+   position: fixed;
+   z-index: 100;
 
 }
 
 nav ul {
-    float:right;
-    margin-right: 30px;
+   float:right;
+   margin-right: 30px;
 }
 nav ul li {
-    list-style-type: none;
-    display: inline-block;
-    transition: 0.8s all;
+
+   display: inline-block;
+   transition: 0.8s all;
+	 padding-top:12px;
 }
 nav ul li:hover{
-    background-color: #29a719;
+   background-color: #29a719;
 
 }
 
 nav ul li a {
-    text-decoration: none;
-    padding:30px;
-    color:white;
+   text-decoration: none;
+   padding:30px;
+   color:white;
 }
 
 .fas fa-bell fa-lg:hover{
-    padding-right: 10px;
+   padding-right: 10px;
 }
 
 .footer {
-    height:70px;
-    width:100%;
-    background-color: rgba(0, 0, 0,0.899);
-    color: white;
-    text-align: center;
-    bottom: 0;
+   height:70px;
+   width:100%;
+   background-color: rgba(0, 0, 0,0.899);
+   color: white;
+   text-align: center;
+   bottom: 0;
 }
 .footer h2 {
-    padding-top: 20px;
+   padding-top: 20px;
 }
-    </style>
+
+</style>
+
 
 </head>
 <body>
 
 	<div class="header-main">
-					 <nav>
-							 <img src="images/logo.png" width="200" height="80" >
-							 <ul>
-									 <li><a href="#"><i class="fas fa-bell fa-lg" style="color:white; cursor:pointer; padding-right:5px;"  aria-hidden="true"></i>Notifications</a></li>
-									 <li><a href="#">Home</a></li>
-									 <li><a href="#">Logout</a></li>
-							 </ul>
-					 </nav>
-			 </div>
+					<nav>
+							<img src="/images/logo.png" width="200" height="80" >
+							<ul>
+
+									<li><a href="/">Logout</a></li>
+							</ul>
+					</nav>
+			</div>
+
 <div class="container section-ourTeam">
 	<div class="row">
 		<div class="col-md-12 ourTeam-hedding text-center">
@@ -172,8 +188,8 @@ nav ul li a {
 </div>
 
 <div class="footer">
-                <span><h2>@PROTSAHAN</h2></span>
-            </div>
+               <span><h2>@PROTSAHAN</h2></span>
+           </div>
 
 </body>
-</html>
+</html> -->
